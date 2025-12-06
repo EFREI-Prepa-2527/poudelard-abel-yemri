@@ -49,6 +49,12 @@ def demander_choix(message, options):
     choix = demander_nombre(message, 1, len(options))
 
     return options[choix - 1]
+import json
+def load_fichier(chemin_fichier):
+    with open(chemin_fichier, "r", encoding="utf-8") as f:
+        contenu = json.load(f)
+
+    return contenu
 
 
 

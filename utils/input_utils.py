@@ -5,7 +5,6 @@ def demander_texte(message):
             return texte
         else:
             print("Invalide, veuillez entrer un texte non vide.")
-
 def demander_nombre(message, min_val=None, max_val=None):
     while True:
         texte = input(message)
@@ -43,9 +42,17 @@ def demander_nombre(message, min_val=None, max_val=None):
             continue
 
         return nombre
+def demander_choix(message, options):
+    for i in range(len(options)):
+        print(i+1, ". ", options[i], sep ="")
+
+    choix = demander_nombre(message, 1, len(options))
+
+    return options[choix - 1]
 
 
-            
+
+
 
 
 

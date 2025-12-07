@@ -28,7 +28,7 @@ def afficher_personnage(joueur):
         else:
             print("{} : {}".format(cle, valeur))
 
-
+def modifier_argent(joueur, montant):
 
 
 

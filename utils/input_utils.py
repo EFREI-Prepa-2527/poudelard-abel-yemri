@@ -59,5 +59,3 @@ def load_fichier(chemin_fichier):
 
 
 
-
-

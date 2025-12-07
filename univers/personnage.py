@@ -27,10 +27,8 @@ def afficher_personnage(joueur):
         #et là si c'est aucun des deux genre un texte ou un nombre comme pr le nom ou l'argent
         else:
             print("{} : {}".format(cle, valeur))
-
 def modifier_argent(joueur, montant):
-
-
-
+    joueur["Argent"] = joueur["Argent"] + montant
+    return joueur["Argent"]
 
 

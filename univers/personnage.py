@@ -1,5 +1,5 @@
 def initialiser_personnage(nom, prenom, attributs):
-    personnage = {
+    joueur = {
         "Nom": nom,
         "Prenom": prenom,
         "Argent": 100,
@@ -7,10 +7,9 @@ def initialiser_personnage(nom, prenom, attributs):
         "Sortilèges": [],
         "Attributs": attributs
     }
-    return personnage
+    return joueur
 def afficher_personnage(joueur):
     print("Profil du personnage :")
-
     for cle, valeur in joueur.items():
         #cas 1 : là yem c'est pr voir si c'est un dictionnaire en gros
         if type(valeur)  == dict:
@@ -30,5 +29,7 @@ def afficher_personnage(joueur):
 def modifier_argent(joueur, montant):
     joueur["Argent"] = joueur["Argent"] + montant
     return joueur["Argent"]
-
-
+def ajouter_objet(joueur, cle, objet):
+    if cle in joueur:
+        joueur[cle].append(objet)
+    return joueur
